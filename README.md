@@ -70,7 +70,7 @@ Realistic details:
 
 - **Two ticket types.** Requests (REQ) for access and changes, Incidents (INC) for sign-in problems and suspicious activity, each with a P1 to P4 priority.
 - **A living directory.** New hires, name changes and departures from closed tickets carry into later tickets. Guest contractors arrive with an end date and get an offboarding ticket when the engagement ends.
-- **Curveballs.** About one in five tickets is a request a careful analyst should push back on, such as a reset requested on someone else's behalf or more access than the job needs. All 10 closed curveballs were caught: 9 declined, and 1 resolved with narrower access than was asked for.
+- **Curveballs.** About one in five tickets is a request a careful analyst should push back on, such as a reset requested on someone else's behalf or more access than the job needs. All 10 closed curveballs were handled correctly: 9 declined, and 1 resolved with narrower access than was asked for.
 - **Skills unlock over time.** New ticket categories are switched on as I finish each part of the lab plan.
 
 Tickets by category: group membership 12, passwords 11, MFA and sign-in 9, admin roles 7, new hires and profile changes 7, guest access 5, offboarding 3.
@@ -89,7 +89,9 @@ Four tickets where the right answer was not the one the requester asked for.
 
 **What I did.** Declined Global Administrator and mapped each task to a narrow role: Guest Inviter, User Administrator and Organizational Branding Administrator. Admin password resets stayed with the Global Administrator. I asked for a follow-up ticket on his return, and when it came, the temporary roles were trimmed. A later request for Privileged Authentication Administrator (REQ0010034) was declined for the same reason: that role can take over a Global Administrator's account.
 
-![The Global Administrator ticket with work notes and debrief](Github%20Images/ticket-curveball.png)
+   *Pushing back on a Privileged Authentication Administrator request (REQ0010034):*
+
+   ![Pushing back on a Privileged Authentication Administrator request](Github%20Images/ticket-curveball.png)
 
 ### MFA fatigue (INC0010009)
 
