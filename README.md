@@ -17,7 +17,7 @@ The lab builds on three years as an Applications Analyst at OceanFirst Bank, whe
 
 ## Architecture
 
-![Lab architecture: tickets change the tenant, and flows review its access](images/architecture.png)
+![Lab architecture: tickets change the tenant, and flows review its access](Github%20Images/architecture.png)
 
 The top row is the help desk, where tickets drive changes in the tenant. The bottom rows are the review campaign, where flows read and update the review workbook and email reviewers through Outlook.com.
 
@@ -58,7 +58,7 @@ Reviewers follow two rules. Group owners review the people in their groups, and 
 
 Barbara Gordon holds four admin roles, the kind of stacked access a review should question. In the first campaign her Guest Inviter role was marked Remove, and Victor Stone's IT owner access was marked Keep.
 
-![User list in the Entra admin center](images/users-list.png)
+![User list in the Entra admin center](Github%20Images/users-list.png)
 
 ## Practice help desk
 
@@ -75,7 +75,7 @@ Realistic details:
 
 Tickets by category: group membership 12, passwords 11, MFA and sign-in 9, admin roles 7, new hires and profile changes 7, guest access 5, offboarding 3.
 
-![The practice ticket queue](images/ticket-queue.png)
+![The practice ticket queue](Github%20Images/ticket-queue.png)
 
 ## Case studies
 
@@ -89,7 +89,7 @@ Four tickets where the right answer was not the one the requester asked for.
 
 **What I did.** Declined Global Administrator and mapped each task to a narrow role: Guest Inviter, User Administrator and Organizational Branding Administrator. Admin password resets stayed with the Global Administrator. I asked for a follow-up ticket on his return, and when it came, the temporary roles were trimmed. A later request for Privileged Authentication Administrator (REQ0010034) was declined for the same reason: that role can take over a Global Administrator's account.
 
-![The Global Administrator ticket with work notes and debrief](images/ticket-curveball.png)
+![The Global Administrator ticket with work notes and debrief](Github%20Images/ticket-curveball.png)
 
 ### MFA fatigue (INC0010009)
 
@@ -133,31 +133,31 @@ Everything below was set up by hand on the free tier and tested by signing in as
 
 **Least-privilege admin roles assigned to the help desk specialist**
 
-![Barbara Gordon's assigned admin roles](images/barbara-roles.png)
+![Barbara Gordon's assigned admin roles](Github%20Images/barbara-roles.png)
 
 **Finance security group with its business owner**
 
-![Finance group members and owners](images/finance-group.png)
+![Finance group members and owners](Github%20Images/finance-group.png)
 
 **Authentication methods policy**
 
-![Microsoft Authenticator and Temporary Access Pass enabled](images/auth-methods-policy.png)
+![Microsoft Authenticator and Temporary Access Pass enabled](Github%20Images/auth-methods-policy.png)
 
 **A B2B guest user**
 
-![Guest user profile showing User type Guest](images/guest-user.png)
+![Guest user profile showing User type Guest](Github%20Images/guest-user.png)
 
 **Enterprise app with assignment required**
 
-![Expense Portal enterprise app assignment](images/app-assignment.png)
+![Expense Portal enterprise app assignment](Github%20Images/app-assignment.png)
 
 **Audit log entries**
 
-![Audit log entries for admin changes](images/audit-log.png)
+![Audit log entries for admin changes](Github%20Images/audit-log.png)
 
 **A Smart Lockout in the sign-in logs**
 
-![Failed sign-in showing the account lockout](images/lockout-sign-in.png)
+![Failed sign-in showing the account lockout](Github%20Images/lockout-sign-in.png)
 
 ## Access review automation
 
@@ -173,7 +173,7 @@ Three Power Automate flows run an access review campaign from one Excel table, a
 | DecisionDate | Stamped by the flow once a decision is made |
 | ReminderCount | How many reminders went out for that row |
 
-![The Review table in the AccessReview workbook](images/review-sheet.png)
+![The Review table in the AccessReview workbook](Github%20Images/review-sheet.png)
 
 | Flow | Schedule | What it does |
 | --- | --- | --- |
@@ -181,9 +181,7 @@ Three Power Automate flows run an access review campaign from one Excel table, a
 | Access Review Decisions | Daily | Finds rows with a Keep or Remove decision and no date. Stamps today's date and emails a confirmation as evidence. |
 | Test Email | Manual | One action that confirmed the account could run flows and send email |
 
-![The Access Review Reminders flow in the Power Automate designer](images/review-flow.png)
-
-![Run history showing successful runs](images/review-flow-runs.png)
+![The Access Review Reminders flow in the Power Automate designer](Github%20Images/review-flow.png)
 
 Build choices that made the flows reliable:
 
@@ -235,4 +233,3 @@ Most of the build time went to account types, licensing and connector limits, no
 - [ ] Add a weekly status report with Pending, Keep and Remove counts and a completion rate
 - [ ] Build a Power BI Desktop dashboard on the AccessReview workbook
 - [ ] Remove a user from the Entra group automatically when a reviewer picks Remove
-- [ ] Take the SC-900 exam
